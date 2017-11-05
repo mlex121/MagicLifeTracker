@@ -1,0 +1,485 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 48;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F6026EAB1FAF1E8F00435065 /* ALAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EAA1FAF1E8F00435065 /* ALAppDelegate.m */; };
+		F6026EAE1FAF1E8F00435065 /* ALViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EAD1FAF1E8F00435065 /* ALViewController.m */; };
+		F6026EB31FAF1E8F00435065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6026EB21FAF1E8F00435065 /* Assets.xcassets */; };
+		F6026EB91FAF1E8F00435065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EB81FAF1E8F00435065 /* main.m */; };
+		F6026EC31FAF1E8F00435065 /* MagicLifeTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F6026EBF1FAF1E8F00435065 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F6026E9E1FAF1E8F00435065 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F6026EA51FAF1E8F00435065;
+			remoteInfo = MagicLifeTracker;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F6026EA61FAF1E8F00435065 /* MagicLifeTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MagicLifeTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6026EA91FAF1E8F00435065 /* ALAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALAppDelegate.h; sourceTree = "<group>"; };
+		F6026EAA1FAF1E8F00435065 /* ALAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALAppDelegate.m; sourceTree = "<group>"; };
+		F6026EAC1FAF1E8F00435065 /* ALViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALViewController.h; sourceTree = "<group>"; };
+		F6026EAD1FAF1E8F00435065 /* ALViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALViewController.m; sourceTree = "<group>"; };
+		F6026EB21FAF1E8F00435065 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F6026EB71FAF1E8F00435065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6026EB81FAF1E8F00435065 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		F6026EBE1FAF1E8F00435065 /* MagicLifeTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicLifeTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicLifeTrackerTests.m; sourceTree = "<group>"; };
+		F6026EC41FAF1E8F00435065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F6026EA31FAF1E8F00435065 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6026EBB1FAF1E8F00435065 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F6026E9D1FAF1E8F00435065 = {
+			isa = PBXGroup;
+			children = (
+				F6026EA81FAF1E8F00435065 /* MagicLifeTracker */,
+				F6026EC11FAF1E8F00435065 /* MagicLifeTrackerTests */,
+				F6026EA71FAF1E8F00435065 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F6026EA71FAF1E8F00435065 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F6026EA61FAF1E8F00435065 /* MagicLifeTracker.app */,
+				F6026EBE1FAF1E8F00435065 /* MagicLifeTrackerTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F6026EA81FAF1E8F00435065 /* MagicLifeTracker */ = {
+			isa = PBXGroup;
+			children = (
+				F6026EA91FAF1E8F00435065 /* ALAppDelegate.h */,
+				F6026EAA1FAF1E8F00435065 /* ALAppDelegate.m */,
+				F6026EAC1FAF1E8F00435065 /* ALViewController.h */,
+				F6026EAD1FAF1E8F00435065 /* ALViewController.m */,
+				F6026EB21FAF1E8F00435065 /* Assets.xcassets */,
+				F6026EB71FAF1E8F00435065 /* Info.plist */,
+				F6026EB81FAF1E8F00435065 /* main.m */,
+			);
+			path = MagicLifeTracker;
+			sourceTree = "<group>";
+		};
+		F6026EC11FAF1E8F00435065 /* MagicLifeTrackerTests */ = {
+			isa = PBXGroup;
+			children = (
+				F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */,
+				F6026EC41FAF1E8F00435065 /* Info.plist */,
+			);
+			path = MagicLifeTrackerTests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F6026EA51FAF1E8F00435065 /* MagicLifeTracker */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6026EC71FAF1E8F00435065 /* Build configuration list for PBXNativeTarget "MagicLifeTracker" */;
+			buildPhases = (
+				F6026EA21FAF1E8F00435065 /* Sources */,
+				F6026EA31FAF1E8F00435065 /* Frameworks */,
+				F6026EA41FAF1E8F00435065 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = MagicLifeTracker;
+			productName = MagicLifeTracker;
+			productReference = F6026EA61FAF1E8F00435065 /* MagicLifeTracker.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F6026EBD1FAF1E8F00435065 /* MagicLifeTrackerTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F6026ECA1FAF1E8F00435065 /* Build configuration list for PBXNativeTarget "MagicLifeTrackerTests" */;
+			buildPhases = (
+				F6026EBA1FAF1E8F00435065 /* Sources */,
+				F6026EBB1FAF1E8F00435065 /* Frameworks */,
+				F6026EBC1FAF1E8F00435065 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F6026EC01FAF1E8F00435065 /* PBXTargetDependency */,
+			);
+			name = MagicLifeTrackerTests;
+			productName = MagicLifeTrackerTests;
+			productReference = F6026EBE1FAF1E8F00435065 /* MagicLifeTrackerTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F6026E9E1FAF1E8F00435065 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = AL;
+				LastUpgradeCheck = 0920;
+				ORGANIZATIONNAME = "Alexander Lim";
+				TargetAttributes = {
+					F6026EA51FAF1E8F00435065 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+					};
+					F6026EBD1FAF1E8F00435065 = {
+						CreatedOnToolsVersion = 9.2;
+						ProvisioningStyle = Automatic;
+						TestTargetID = F6026EA51FAF1E8F00435065;
+					};
+				};
+			};
+			buildConfigurationList = F6026EA11FAF1E8F00435065 /* Build configuration list for PBXProject "MagicLifeTracker" */;
+			compatibilityVersion = "Xcode 8.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F6026E9D1FAF1E8F00435065;
+			productRefGroup = F6026EA71FAF1E8F00435065 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F6026EA51FAF1E8F00435065 /* MagicLifeTracker */,
+				F6026EBD1FAF1E8F00435065 /* MagicLifeTrackerTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F6026EA41FAF1E8F00435065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6026EB31FAF1E8F00435065 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6026EBC1FAF1E8F00435065 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F6026EA21FAF1E8F00435065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6026EAE1FAF1E8F00435065 /* ALViewController.m in Sources */,
+				F6026EB91FAF1E8F00435065 /* main.m in Sources */,
+				F6026EAB1FAF1E8F00435065 /* ALAppDelegate.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F6026EBA1FAF1E8F00435065 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F6026EC31FAF1E8F00435065 /* MagicLifeTrackerTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F6026EC01FAF1E8F00435065 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F6026EA51FAF1E8F00435065 /* MagicLifeTracker */;
+			targetProxy = F6026EBF1FAF1E8F00435065 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		F6026EC51FAF1E8F00435065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		F6026EC61FAF1E8F00435065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F6026EC81FAF1E8F00435065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_INTEGER = YES;
+				CLANG_UNDEFINED_BEHAVIOR_SANITIZER_NULLABILITY = YES;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = MagicLifeTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-Wno-c++98-compat-pedantic",
+					"-Wno-c++98-compat",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-documentation-deprecated-sync",
+					"-Wno-unused-parameter",
+					"-Wextra",
+					"-Wall",
+					"-Weverything",
+					"-Wpedantic",
+					"-Werror",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F6026EC91FAF1E8F00435065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = NO;
+				CLANG_WARN_ASSIGN_ENUM = YES;
+				CLANG_WARN_IMPLICIT_SIGN_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_ATOMIC_PROPERTIES = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_REPEATED_USE_OF_WEAK = YES_AGGRESSIVE;
+				CLANG_WARN_SUSPICIOUS_IMPLICIT_CONVERSION = YES;
+				CODE_SIGN_STYLE = Automatic;
+				GCC_TREAT_IMPLICIT_FUNCTION_DECLARATIONS_AS_ERRORS = YES;
+				GCC_TREAT_INCOMPATIBLE_POINTER_TYPE_WARNINGS_AS_ERRORS = YES;
+				GCC_TREAT_WARNINGS_AS_ERRORS = YES;
+				GCC_UNROLL_LOOPS = YES;
+				GCC_WARN_ABOUT_MISSING_FIELD_INITIALIZERS = YES;
+				GCC_WARN_ABOUT_MISSING_NEWLINE = YES;
+				GCC_WARN_ABOUT_MISSING_PROTOTYPES = YES;
+				GCC_WARN_INITIALIZER_NOT_FULLY_BRACKETED = YES;
+				GCC_WARN_PEDANTIC = YES;
+				GCC_WARN_SHADOW = YES;
+				GCC_WARN_SIGN_COMPARE = YES;
+				GCC_WARN_UNKNOWN_PRAGMAS = YES;
+				GCC_WARN_UNUSED_LABEL = YES;
+				INFOPLIST_FILE = MagicLifeTracker/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_CFLAGS = (
+					"-Wno-c++98-compat-pedantic",
+					"-Wno-c++98-compat",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-documentation-deprecated-sync",
+					"-Wno-unused-parameter",
+					"-Wextra",
+					"-Wall",
+					"-Weverything",
+					"-Wpedantic",
+					"-Werror",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTracker;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F6026ECB1FAF1E8F00435065 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MagicLifeTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicLifeTracker.app/MagicLifeTracker";
+			};
+			name = Debug;
+		};
+		F6026ECC1FAF1E8F00435065 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = MagicLifeTrackerTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTrackerTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/MagicLifeTracker.app/MagicLifeTracker";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F6026EA11FAF1E8F00435065 /* Build configuration list for PBXProject "MagicLifeTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6026EC51FAF1E8F00435065 /* Debug */,
+				F6026EC61FAF1E8F00435065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6026EC71FAF1E8F00435065 /* Build configuration list for PBXNativeTarget "MagicLifeTracker" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6026EC81FAF1E8F00435065 /* Debug */,
+				F6026EC91FAF1E8F00435065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F6026ECA1FAF1E8F00435065 /* Build configuration list for PBXNativeTarget "MagicLifeTrackerTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F6026ECB1FAF1E8F00435065 /* Debug */,
+				F6026ECC1FAF1E8F00435065 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F6026E9E1FAF1E8F00435065 /* Project object */;
+}
