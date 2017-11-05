@@ -12,6 +12,7 @@
 		F6026EB31FAF1E8F00435065 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F6026EB21FAF1E8F00435065 /* Assets.xcassets */; };
 		F6026EB91FAF1E8F00435065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EB81FAF1E8F00435065 /* main.m */; };
 		F6026EC31FAF1E8F00435065 /* MagicLifeTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */; };
+		F6026EEF1FAF2B8000435065 /* ALLifeTrackerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,8 @@
 		F6026EBE1FAF1E8F00435065 /* MagicLifeTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MagicLifeTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MagicLifeTrackerTests.m; sourceTree = "<group>"; };
 		F6026EC41FAF1E8F00435065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F6026EED1FAF2B8000435065 /* ALLifeTrackerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLifeTrackerView.h; sourceTree = "<group>"; };
+		F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLifeTrackerView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,6 +87,8 @@
 				F6026EB21FAF1E8F00435065 /* Assets.xcassets */,
 				F6026EB71FAF1E8F00435065 /* Info.plist */,
 				F6026EB81FAF1E8F00435065 /* main.m */,
+				F6026EED1FAF2B8000435065 /* ALLifeTrackerView.h */,
+				F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */,
 			);
 			path = MagicLifeTracker;
 			sourceTree = "<group>";
@@ -200,6 +205,7 @@
 			files = (
 				F6026EAE1FAF1E8F00435065 /* ALViewController.m in Sources */,
 				F6026EB91FAF1E8F00435065 /* main.m in Sources */,
+				F6026EEF1FAF2B8000435065 /* ALLifeTrackerView.m in Sources */,
 				F6026EAB1FAF1E8F00435065 /* ALAppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -358,16 +364,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
-					"-Wno-c++98-compat-pedantic",
-					"-Wno-c++98-compat",
-					"-Wno-objc-missing-property-synthesis",
-					"-Wno-documentation-deprecated-sync",
-					"-Wno-unused-parameter",
-					"-Wextra",
-					"-Wall",
-					"-Weverything",
-					"-Wpedantic",
 					"-Werror",
+					"-Wpedantic",
+					"-Weverything",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wno-documentation-deprecated-sync",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-c++98-compat",
+					"-Wno-c++98-compat-pedantic",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -404,16 +410,16 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_CFLAGS = (
-					"-Wno-c++98-compat-pedantic",
-					"-Wno-c++98-compat",
-					"-Wno-objc-missing-property-synthesis",
-					"-Wno-documentation-deprecated-sync",
-					"-Wno-unused-parameter",
-					"-Wextra",
-					"-Wall",
-					"-Weverything",
-					"-Wpedantic",
 					"-Werror",
+					"-Wpedantic",
+					"-Weverything",
+					"-Wall",
+					"-Wextra",
+					"-Wno-unused-parameter",
+					"-Wno-documentation-deprecated-sync",
+					"-Wno-objc-missing-property-synthesis",
+					"-Wno-c++98-compat",
+					"-Wno-c++98-compat-pedantic",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.alexanderlim.MagicLifeTracker;
 				PRODUCT_NAME = "$(TARGET_NAME)";

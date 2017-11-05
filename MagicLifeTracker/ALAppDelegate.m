@@ -19,14 +19,26 @@
 //
 
 #import "ALAppDelegate.h"
+#import "ALViewController.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ALAppDelegate ()
-
-@end
-
 @implementation ALAppDelegate
+@synthesize window;
+
+#pragma mark - UIApplicationDelegate
+
+- (void)applicationDidFinishLaunching:(UIApplication *)application
+{
+    self.window = [[UIWindow alloc] init];
+    self.window.tintColor = UIColor.blackColor;
+
+    ALViewController *rootViewController = [[ALViewController alloc] init];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+
+    self.window.rootViewController = navigationController;
+    [self.window makeKeyAndVisible];
+}
 
 @end
 

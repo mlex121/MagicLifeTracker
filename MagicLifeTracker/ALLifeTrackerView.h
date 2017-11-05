@@ -1,7 +1,7 @@
-//
-//  ALViewController.h
+//  
+//  ALLifeTrackerView.h
 //  MagicLifeTracker
-//
+//  
 //  Created by Alexander Lim on 2017-11-05.
 //  Copyright 2017 Alexander Lim
 //
@@ -22,7 +22,10 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-@interface ALViewController : UIViewController
+@interface ALLifeTrackerView : UIView
+
+@property (nonatomic) NSInteger lifeTotal;
+
 @end
 
 NS_ASSUME_NONNULL_END

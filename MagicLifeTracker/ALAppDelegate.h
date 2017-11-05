@@ -23,9 +23,6 @@
 NS_ASSUME_NONNULL_BEGIN
 
 @interface ALAppDelegate : UIResponder <UIApplicationDelegate>
-
-@property (nonatomic, nonnull) UIWindow *window;
-
 @end
 
 NS_ASSUME_NONNULL_END
