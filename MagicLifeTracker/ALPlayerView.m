@@ -149,8 +149,9 @@ static const NSTimeInterval animationDuration = 0.25;
 
 - (void)clearRollDelayed
 {
+    static const int64_t delayInNanoseconds = (int64_t)(3 * NSEC_PER_SEC / 2);
     ALWeakSelf weakSelf = self;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, delayInNanoseconds), dispatch_get_main_queue(), ^{
         [weakSelf clearRoll];
     });
 }
