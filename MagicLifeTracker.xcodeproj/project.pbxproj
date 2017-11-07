@@ -13,6 +13,8 @@
 		F6026EB91FAF1E8F00435065 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EB81FAF1E8F00435065 /* main.m */; };
 		F6026EC31FAF1E8F00435065 /* MagicLifeTrackerTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EC21FAF1E8F00435065 /* MagicLifeTrackerTests.m */; };
 		F6026EEF1FAF2B8000435065 /* ALLifeTrackerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */; };
+		F6026EF51FAFBA9B00435065 /* ALRollView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EF41FAFBA9B00435065 /* ALRollView.m */; };
+		F6026EF81FB06FAC00435065 /* ALPlayerView.m in Sources */ = {isa = PBXBuildFile; fileRef = F6026EF71FB06FAC00435065 /* ALPlayerView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -39,6 +41,11 @@
 		F6026EC41FAF1E8F00435065 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		F6026EED1FAF2B8000435065 /* ALLifeTrackerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALLifeTrackerView.h; sourceTree = "<group>"; };
 		F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALLifeTrackerView.m; sourceTree = "<group>"; };
+		F6026EF31FAFBA9B00435065 /* ALRollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALRollView.h; sourceTree = "<group>"; };
+		F6026EF41FAFBA9B00435065 /* ALRollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALRollView.m; sourceTree = "<group>"; };
+		F6026EF61FB06FAC00435065 /* ALPlayerView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALPlayerView.h; sourceTree = "<group>"; };
+		F6026EF71FB06FAC00435065 /* ALPlayerView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ALPlayerView.m; sourceTree = "<group>"; };
+		F65193A41FB07D7B00C16D05 /* ALMacros.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ALMacros.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +96,11 @@
 				F6026EB81FAF1E8F00435065 /* main.m */,
 				F6026EED1FAF2B8000435065 /* ALLifeTrackerView.h */,
 				F6026EEE1FAF2B8000435065 /* ALLifeTrackerView.m */,
+				F6026EF31FAFBA9B00435065 /* ALRollView.h */,
+				F6026EF41FAFBA9B00435065 /* ALRollView.m */,
+				F6026EF61FB06FAC00435065 /* ALPlayerView.h */,
+				F6026EF71FB06FAC00435065 /* ALPlayerView.m */,
+				F65193A41FB07D7B00C16D05 /* ALMacros.h */,
 			);
 			path = MagicLifeTracker;
 			sourceTree = "<group>";
@@ -203,7 +215,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F6026EF51FAFBA9B00435065 /* ALRollView.m in Sources */,
 				F6026EAE1FAF1E8F00435065 /* ALViewController.m in Sources */,
+				F6026EF81FB06FAC00435065 /* ALPlayerView.m in Sources */,
 				F6026EB91FAF1E8F00435065 /* main.m in Sources */,
 				F6026EEF1FAF2B8000435065 /* ALLifeTrackerView.m in Sources */,
 				F6026EAB1FAF1E8F00435065 /* ALAppDelegate.m in Sources */,

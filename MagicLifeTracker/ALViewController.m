@@ -19,16 +19,16 @@
 //
 
 #import "ALViewController.h"
-#import "ALLifeTrackerView.h"
+#import "ALPlayerView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - ALViewController
 
-@interface ALViewController ()
+@interface ALViewController () <ALPlayerViewDelegate>
 
-@property (nonatomic, readonly) ALLifeTrackerView *topLifeTrackerView;
-@property (nonatomic, readonly) ALLifeTrackerView *bottomLifeTrackerView;
+@property (nonatomic, readonly) ALPlayerView *topPlayerView;
+@property (nonatomic, readonly) ALPlayerView *bottomPlayerView;
 
 @end
 
@@ -44,8 +44,12 @@ NS_ASSUME_NONNULL_BEGIN
     if (self) {
         self.title = @"Magic Life Tracker";
 
-        _topLifeTrackerView = [[ALLifeTrackerView alloc] init];
-        _bottomLifeTrackerView = [[ALLifeTrackerView alloc] init];
+        _topPlayerView = [[ALPlayerView alloc] init];
+        self.topPlayerView.delegate = self;
+
+        _bottomPlayerView = [[ALPlayerView alloc] init];
+        self.bottomPlayerView.delegate = self;
+
         self.edgesForExtendedLayout = UIRectEdgeNone;
     }
 
@@ -59,8 +63,8 @@ NS_ASSUME_NONNULL_BEGIN
     [super viewDidLoad];
 
     self.view.backgroundColor = UIColor.blackColor;
-    [self.view addSubview:self.topLifeTrackerView];
-    [self.view addSubview:self.bottomLifeTrackerView];
+    [self.view addSubview:self.topPlayerView];
+    [self.view addSubview:self.bottomPlayerView];
 
     UIBarButtonItem *rollItem = [[UIBarButtonItem alloc] initWithTitle:@"🎲" style:UIBarButtonItemStylePlain target:self action:@selector(rollButtonTapped)];
 
@@ -80,19 +84,50 @@ NS_ASSUME_NONNULL_BEGIN
 {
     [super viewWillLayoutSubviews];
 
-    CGRect bounds = self.view.bounds;
-    CGFloat width = CGRectGetWidth(bounds);
-    CGFloat halfHeight = CGRectGetHeight(bounds) / 2;
-    self.topLifeTrackerView.frame = CGRectMake(0, 0, width, halfHeight);
-    self.topLifeTrackerView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI);
-    self.bottomLifeTrackerView.frame = CGRectMake(0, CGRectGetMidY(bounds), width, halfHeight);
+    const CGRect bounds = self.view.bounds;
+    const CGFloat width = CGRectGetWidth(bounds);
+    const CGFloat halfHeight = CGRectGetHeight(bounds) / 2;
+
+    // Top half of the screen, rotated a half-turn.
+    self.topPlayerView.frame = CGRectMake(0, 0, width, halfHeight);
+    self.topPlayerView.transform = CGAffineTransformRotate(CGAffineTransformIdentity, M_PI);
+
+    // Bottom half of the screen.
+    self.bottomPlayerView.frame = CGRectMake(0, CGRectGetMidY(bounds), width, halfHeight);
+}
+
+#pragma mark - ALPlayerViewDelegate
+
+- (void)playerViewRollViewTapped:(ALPlayerView *)playerView
+{
+    [self.topPlayerView clearRoll];
+    [self.bottomPlayerView clearRoll];
 }
 
 #pragma mark - Actions
 
 - (void)rollButtonTapped
 {
-    // TODO
+    /*
+     The dice roll is "rigged" in that we don't keep rolling until someone wins;
+     instead, we flip a coin to determine winner.
+
+     Then we generate the winner's dice roll between 1 and 6 inclusive and roll
+     a number for the loser that's below that.
+
+     This avoids waiting for a potentially arbitrarily large number of dice
+     rolls.
+     */
+    BOOL topPlayerWins = (arc4random_uniform(2) == 0);
+    uint32_t winningDiceRoll = arc4random_uniform(5) + 1;
+    uint32_t losingDiceRoll = arc4random_uniform(winningDiceRoll);
+
+    // Assign the winner/loser and add 1 because we roll 0-indexed.
+    NSUInteger topPlayerRoll = (NSUInteger)(topPlayerWins ? winningDiceRoll : losingDiceRoll) + 1;
+    NSUInteger bottomPlayerRoll = (NSUInteger)(topPlayerWins ? losingDiceRoll : winningDiceRoll) + 1;
+
+    [self.topPlayerView rollWithValue:topPlayerRoll isWinner:topPlayerWins];
+    [self.bottomPlayerView rollWithValue:bottomPlayerRoll isWinner:!topPlayerWins];
 }
 
 - (void)resetButtonTapped
@@ -110,8 +145,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)resetTrackers
 {
     static const NSInteger defaultLifeTotal = 20;
-    self.topLifeTrackerView.lifeTotal = defaultLifeTotal;
-    self.bottomLifeTrackerView.lifeTotal = defaultLifeTotal;
+    self.topPlayerView.lifeTotal = defaultLifeTotal;
+    self.bottomPlayerView.lifeTotal = defaultLifeTotal;
 }
 
 @end
