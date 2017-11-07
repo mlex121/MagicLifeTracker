@@ -24,4 +24,7 @@
 #define ALWeakSelf __weak __typeof__(self) _Nullable
 #define ALStrongSelf __strong __typeof__(self) _Nullable
 
+#define ALAssertNonnull(value__) \
+    do { NSCAssert(value__ != nil, @"Expected '%@' to be nonnull", @#value__); } while (0)
+
 #endif /* ALMacros_h */

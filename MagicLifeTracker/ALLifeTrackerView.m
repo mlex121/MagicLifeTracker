@@ -19,6 +19,7 @@
 //
 
 #import "ALLifeTrackerView.h"
+#import "ALMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -41,18 +42,18 @@ NS_ASSUME_NONNULL_BEGIN
     self = [super initWithFrame:frame];
 
     if (self) {
-        _minusButton = [[UIButton alloc] init];
-        [self.minusButton addTarget:self
-                             action:@selector(minusButtonTapped:)
-                   forControlEvents:UIControlEventTouchUpInside];
-        self.minusButton.showsTouchWhenHighlighted = YES;
+        static const CGFloat buttonLabelAdjustment = 25;
+
+        _minusButton = [[self class] buttonWithTitle:@"⊖"
+                                              target:self
+                                              action:@selector(minusButtonTapped:)];
+        self.minusButton.contentEdgeInsets = UIEdgeInsetsMake(0, -buttonLabelAdjustment, 0, buttonLabelAdjustment);
         [self addSubview:self.minusButton];
 
-        _plusButton = [[UIButton alloc] init];
-        [self.plusButton addTarget:self
-                            action:@selector(plusButtonTapped:)
-                  forControlEvents:UIControlEventTouchUpInside];
-        self.plusButton.showsTouchWhenHighlighted = YES;
+        _plusButton = [[self class] buttonWithTitle:@"⊕"
+                                             target:self
+                                             action:@selector(plusButtonTapped:)];
+        self.plusButton.contentEdgeInsets = UIEdgeInsetsMake(0, buttonLabelAdjustment, 0, -buttonLabelAdjustment);
         [self addSubview:self.plusButton];
 
         _lifeTotalLabel = [[UILabel alloc] init];
@@ -97,6 +98,24 @@ NS_ASSUME_NONNULL_BEGIN
     _lifeTotal = lifeTotal;
     self.lifeTotalLabel.text = [NSString stringWithFormat:@"%zd",
                                 _lifeTotal];
+}
+
+#pragma mark - Private API
+
++ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target action:(SEL)action
+{
+    ALAssertNonnull(title);
+    UIButton *button = [[UIButton alloc] init];
+
+    [button setTitle:title forState:UIControlStateNormal];
+    button.titleLabel.textColor = UIColor.whiteColor;
+    button.titleLabel.font = [UIFont systemFontOfSize:50];
+    [button addTarget:target
+               action:action
+     forControlEvents:UIControlEventTouchUpInside];
+    button.showsTouchWhenHighlighted = YES;
+
+    return button;
 }
 
 @end
