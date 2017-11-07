@@ -31,10 +31,15 @@ NS_ASSUME_NONNULL_BEGIN
 - (void)applicationDidFinishLaunching:(UIApplication *)application
 {
     self.window = [[UIWindow alloc] init];
-    self.window.tintColor = UIColor.blackColor;
+    self.window.tintColor = UIColor.whiteColor;
 
-    ALViewController *rootViewController = [[ALViewController alloc] init];
-    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:rootViewController];
+    UINavigationController *navigationController = [[UINavigationController alloc] initWithRootViewController:[[ALViewController alloc] init]];
+    navigationController.navigationBar.translucent = NO;
+    navigationController.navigationBar.barTintColor = [UIColor colorWithWhite:0.25 alpha:1];
+    navigationController.navigationBar.titleTextAttributes = @{
+                                                               NSForegroundColorAttributeName: (UIColor *)self.window.tintColor,
+                                                               };
+    navigationController.navigationBar.barStyle = UIBarStyleBlack;
 
     self.window.rootViewController = navigationController;
     [self.window makeKeyAndVisible];
