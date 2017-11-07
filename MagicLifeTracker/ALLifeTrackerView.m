@@ -19,6 +19,7 @@
 //
 
 #import "ALLifeTrackerView.h"
+#import "ALLifeTrackerButton.h"
 #import "ALMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
@@ -27,8 +28,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface ALLifeTrackerView ()
 
-@property (nonatomic, readonly) UIButton *minusButton;
-@property (nonatomic, readonly) UIButton *plusButton;
+@property (nonatomic, readonly) ALLifeTrackerButton *minusButton;
+@property (nonatomic, readonly) ALLifeTrackerButton *plusButton;
 @property (nonatomic, readonly) UILabel *lifeTotalLabel;
 
 @end
@@ -44,16 +45,14 @@ NS_ASSUME_NONNULL_BEGIN
     if (self) {
         static const CGFloat buttonLabelAdjustment = 25;
 
-        _minusButton = [[self class] buttonWithTitle:@"⊖"
-                                              target:self
-                                              action:@selector(minusButtonTapped:)];
-        self.minusButton.contentEdgeInsets = UIEdgeInsetsMake(0, -buttonLabelAdjustment, 0, buttonLabelAdjustment);
+        _minusButton = [ALLifeTrackerButton minusButtonWithTarget:self
+                                                      pressAction:@selector(minusButtonTapped:)
+                                             horizontalAdjustment:buttonLabelAdjustment];
         [self addSubview:self.minusButton];
 
-        _plusButton = [[self class] buttonWithTitle:@"⊕"
-                                             target:self
-                                             action:@selector(plusButtonTapped:)];
-        self.plusButton.contentEdgeInsets = UIEdgeInsetsMake(0, buttonLabelAdjustment, 0, -buttonLabelAdjustment);
+        _plusButton = [ALLifeTrackerButton plusButtonWithTarget:self
+                                                    pressAction:@selector(plusButtonTapped:)
+                                           horizontalAdjustment:buttonLabelAdjustment];
         [self addSubview:self.plusButton];
 
         _lifeTotalLabel = [[UILabel alloc] init];
@@ -98,24 +97,6 @@ NS_ASSUME_NONNULL_BEGIN
     _lifeTotal = lifeTotal;
     self.lifeTotalLabel.text = [NSString stringWithFormat:@"%zd",
                                 _lifeTotal];
-}
-
-#pragma mark - Private API
-
-+ (UIButton *)buttonWithTitle:(NSString *)title target:(id)target action:(SEL)action
-{
-    ALAssertNonnull(title);
-    UIButton *button = [[UIButton alloc] init];
-
-    [button setTitle:title forState:UIControlStateNormal];
-    button.titleLabel.textColor = UIColor.whiteColor;
-    button.titleLabel.font = [UIFont systemFontOfSize:50];
-    [button addTarget:target
-               action:action
-     forControlEvents:UIControlEventTouchUpInside];
-    button.showsTouchWhenHighlighted = YES;
-
-    return button;
 }
 
 @end
