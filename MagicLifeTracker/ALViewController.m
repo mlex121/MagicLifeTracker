@@ -20,6 +20,7 @@
 
 #import "ALViewController.h"
 #import "ALPlayerView.h"
+#import "ALSettings.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -144,9 +145,8 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)resetTrackers
 {
-    static const NSInteger defaultLifeTotal = 20;
-    self.topPlayerView.lifeTotal = defaultLifeTotal;
-    self.bottomPlayerView.lifeTotal = defaultLifeTotal;
+    self.topPlayerView.lifeTotal = ALSettings.settings.startingLifeTotal;
+    self.bottomPlayerView.lifeTotal = ALSettings.settings.startingLifeTotal;
 }
 
 @end

@@ -27,4 +27,6 @@
 #define ALAssertNonnull(value__) \
     do { NSCAssert(value__ != nil, @"Expected '%@' to be nonnull", @#value__); } while (0)
 
+#define AL_UNRECOGNIZED_SELECTOR { [self doesNotRecognizeSelector:_cmd]; abort(); }
+
 #endif /* ALMacros_h */

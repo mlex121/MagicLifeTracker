@@ -19,6 +19,7 @@
 //
 
 #import "ALLifeTrackerButton.h"
+#import "ALMacros.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -65,6 +66,11 @@ NS_ASSUME_NONNULL_BEGIN
                            pressAction:pressAction
                   horizontalAdjustment:-horizontalAdjustment];
 }
+
+- (instancetype)initWithFrame:(CGRect)frame AL_UNRECOGNIZED_SELECTOR
+- (nullable instancetype)initWithCoder:(NSCoder *)aDecoder AL_UNRECOGNIZED_SELECTOR
+- (instancetype)init AL_UNRECOGNIZED_SELECTOR
++ (instancetype)new AL_UNRECOGNIZED_SELECTOR
 
 #pragma mark - UIButton
 
