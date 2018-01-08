@@ -29,6 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 @protocol ALPlayerViewDelegate <NSObject>
 
 - (void)playerViewRollViewTapped:(ALPlayerView *)playerView;
+- (void)playerView:(ALPlayerView *)playerView didChangeLifeTotal:(NSInteger)newLifeTotal;
 
 @end
 

@@ -78,7 +78,8 @@ NS_ASSUME_NONNULL_BEGIN
     UIBarButtonItem *settingsItem = [[UIBarButtonItem alloc] initWithTitle:@"⚙️" style:UIBarButtonItemStylePlain target:self action:@selector(settingsButtonTapped)];
     self.navigationItem.rightBarButtonItem = settingsItem;
 
-    [self resetTrackers];
+    self.topPlayerView.lifeTotal = ALSettings.settings.topPlayerLifeTotal;
+    self.bottomPlayerView.lifeTotal = ALSettings.settings.bottomPlayerLifeTotal;
 }
 
 - (void)viewWillLayoutSubviews
@@ -98,6 +99,18 @@ NS_ASSUME_NONNULL_BEGIN
 }
 
 #pragma mark - ALPlayerViewDelegate
+
+- (void)playerView:(ALPlayerView *)playerView didChangeLifeTotal:(NSInteger)newLifeTotal
+{
+    if (playerView == self.topPlayerView)
+    {
+        ALSettings.settings.topPlayerLifeTotal = newLifeTotal;
+    }
+    else if (playerView == self.bottomPlayerView)
+    {
+        ALSettings.settings.bottomPlayerLifeTotal = newLifeTotal;
+    }
+}
 
 - (void)playerViewRollViewTapped:(ALPlayerView *)playerView
 {

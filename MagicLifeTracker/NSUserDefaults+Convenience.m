@@ -1,8 +1,8 @@
 //  
-//  ALLifeTrackerView.h
+//  NSUserDefaults+Convenience.m
 //  MagicLifeTracker
 //  
-//  Created by Alexander Lim on 2017-11-05.
+//  Created by Alexander Lim on 11/11/17.
 //  Copyright 2017 Alexander Lim
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,22 +18,27 @@
 //  limitations under the License.
 //
 
-@import UIKit;
+#import "NSUserDefaults+Convenience.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ALLifeTrackerView;
+@implementation NSUserDefaults (Convenience)
 
-@protocol ALLifeTrackerViewDelegate <NSObject>
+#pragma mark - Public API
 
-- (void)lifeTrackerView:(ALLifeTrackerView *)lifeTrackerView didChangeLifeTotal:(NSInteger)newLifeTotal;
+- (NSInteger)integerForKey:(NSString *)defaultName defaultValue:(NSInteger)defaultValue
+{
+    id _Nullable persisted = [self objectForKey:defaultName];
 
-@end
+    if (![persisted isKindOfClass:[NSNumber class]])
+    {
+        [self setInteger:defaultValue
+                  forKey:defaultName];
+        return defaultValue;
+    }
 
-@interface ALLifeTrackerView : UIView
-
-@property (nonatomic, weak, nullable) id<ALLifeTrackerViewDelegate> delegate;
-@property (nonatomic) NSInteger lifeTotal;
+    return ((NSNumber *)persisted).integerValue;
+}
 
 @end
 

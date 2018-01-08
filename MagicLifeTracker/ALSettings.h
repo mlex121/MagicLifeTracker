@@ -43,6 +43,16 @@ NS_ASSUME_NONNULL_BEGIN
  */
 @property (nonatomic) NSInteger startingLifeTotal;
 
+/**
+ @brief The current life total of the top player on the screen.
+ */
+@property (nonatomic) NSInteger topPlayerLifeTotal;
+
+/**
+ @brief The current life total of the bottom player on the screen.
+ */
+@property (nonatomic) NSInteger bottomPlayerLifeTotal;
+
 - (instancetype)init NS_UNAVAILABLE;
 + (instancetype)new NS_UNAVAILABLE;
 

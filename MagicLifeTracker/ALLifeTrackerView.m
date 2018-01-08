@@ -97,6 +97,8 @@ NS_ASSUME_NONNULL_BEGIN
     _lifeTotal = lifeTotal;
     self.lifeTotalLabel.text = [NSString stringWithFormat:@"%zd",
                                 _lifeTotal];
+    [self.delegate lifeTrackerView:self
+                didChangeLifeTotal:self.lifeTotal];
 }
 
 @end

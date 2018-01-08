@@ -1,8 +1,8 @@
 //  
-//  ALLifeTrackerView.h
+//  NSUserDefaults+Convenience.h
 //  MagicLifeTracker
 //  
-//  Created by Alexander Lim on 2017-11-05.
+//  Created by Alexander Lim on 11/11/17.
 //  Copyright 2017 Alexander Lim
 //
 //  Licensed under the Apache License, Version 2.0 (the "License");
@@ -18,22 +18,16 @@
 //  limitations under the License.
 //
 
-@import UIKit;
+@import Foundation;
 
 NS_ASSUME_NONNULL_BEGIN
 
-@class ALLifeTrackerView;
+@interface NSUserDefaults (Convenience)
 
-@protocol ALLifeTrackerViewDelegate <NSObject>
-
-- (void)lifeTrackerView:(ALLifeTrackerView *)lifeTrackerView didChangeLifeTotal:(NSInteger)newLifeTotal;
-
-@end
-
-@interface ALLifeTrackerView : UIView
-
-@property (nonatomic, weak, nullable) id<ALLifeTrackerViewDelegate> delegate;
-@property (nonatomic) NSInteger lifeTotal;
+/**
+ @brief Retrieve an integer for the given key, storing the default if missing.
+ */
+- (NSInteger)integerForKey:(NSString *)defaultName defaultValue:(NSInteger)defaultValue;
 
 @end
 

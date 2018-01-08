@@ -31,7 +31,7 @@ static const NSTimeInterval animationDuration = 0.25;
 
 #pragma mark - ALPlayerView
 
-@interface ALPlayerView () <ALRollViewDelegate>
+@interface ALPlayerView () <ALLifeTrackerViewDelegate, ALRollViewDelegate>
 
 @property (nonatomic, readonly) ALLifeTrackerView *lifeTrackerView;
 @property (nonatomic, readonly) ALRollView *rollView;
@@ -49,6 +49,7 @@ static const NSTimeInterval animationDuration = 0.25;
     if (self)
     {
         _lifeTrackerView = [[ALLifeTrackerView alloc] initWithFrame:frame];
+        self.lifeTrackerView.delegate = self;
         [self addSubview:self.lifeTrackerView];
 
         _rollView = [[ALRollView alloc] initWithFrame:frame];
@@ -70,15 +71,19 @@ static const NSTimeInterval animationDuration = 0.25;
     self.rollView.frame = self.bounds;
 }
 
+#pragma mark - ALLifeTrackerViewDelegate
+
+- (void)lifeTrackerView:(ALLifeTrackerView *)lifeTrackerView didChangeLifeTotal:(NSInteger)newLifeTotal
+{
+    [self.delegate playerView:self
+           didChangeLifeTotal:newLifeTotal];
+}
+
 #pragma mark - ALRollViewDelegate
 
 - (void)rollViewTapped:(ALRollView *)rollView
 {
-    __strong id<ALPlayerViewDelegate> _Nullable delegate = self.delegate;
-    if ([delegate respondsToSelector:@selector(playerViewRollViewTapped:)])
-    {
-        [delegate playerViewRollViewTapped:self];
-    }
+    [self.delegate playerViewRollViewTapped:self];
 }
 
 #pragma mark - Public API

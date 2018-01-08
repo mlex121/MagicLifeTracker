@@ -20,12 +20,16 @@
 
 #import "ALSettings.h"
 #import "ALMacros.h"
+#import "NSUserDefaults+Convenience.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
 #pragma mark - NSUserDefaults keys
 
 static NSString * const ALSettingsStartingLifeTotalKey = @"ALSettingsStartingLifeTotalKey";
+
+static NSString * const ALSettingsTopPlayerLifeTotalKey = @"ALSettingsTopPlayerLifeTotalKey";
+static NSString * const ALSettingsBottomPlayerLifeTotalKey = @"ALSettingsBottomPlayerLifeTotalKey";
 
 #pragma mark - ALSettings
 
@@ -71,23 +75,41 @@ static NSString * const ALSettingsStartingLifeTotalKey = @"ALSettingsStartingLif
 
 - (NSInteger)startingLifeTotal
 {
-    id _Nullable persistedStartingLifeTotal = [self.userDefaults objectForKey:ALSettingsStartingLifeTotalKey];
-
-    if (![persistedStartingLifeTotal isKindOfClass:[NSNumber class]])
-    {
-        static const NSInteger defaultValue = 20;
-        self.startingLifeTotal = defaultValue;
-        return defaultValue;
-    }
-
-    NSNumber *startingLifeTotal = (NSNumber *)persistedStartingLifeTotal;
-    return startingLifeTotal.integerValue;
+    static const NSInteger defaultValue = 20;
+    return [self.userDefaults integerForKey:ALSettingsStartingLifeTotalKey
+                               defaultValue:defaultValue];
 }
 
 - (void)setStartingLifeTotal:(NSInteger)startingLifeTotal
 {
-    [self.userDefaults setObject:@(startingLifeTotal)
-                          forKey:ALSettingsStartingLifeTotalKey];
+    [self.userDefaults setInteger:startingLifeTotal
+                           forKey:ALSettingsStartingLifeTotalKey];
+    [self.userDefaults synchronize];
+}
+
+- (NSInteger)topPlayerLifeTotal
+{
+    return [self.userDefaults integerForKey:ALSettingsTopPlayerLifeTotalKey
+                               defaultValue:self.startingLifeTotal];
+}
+
+- (void)setTopPlayerLifeTotal:(NSInteger)topPlayerLifeTotal
+{
+    [self.userDefaults setInteger:topPlayerLifeTotal
+                           forKey:ALSettingsTopPlayerLifeTotalKey];
+    [self.userDefaults synchronize];
+}
+
+- (NSInteger)bottomPlayerLifeTotal
+{
+    return [self.userDefaults integerForKey:ALSettingsBottomPlayerLifeTotalKey
+                               defaultValue:self.startingLifeTotal];
+}
+
+- (void)setBottomPlayerLifeTotal:(NSInteger)bottomPlayerLifeTotal
+{
+    [self.userDefaults setInteger:bottomPlayerLifeTotal
+                           forKey:ALSettingsBottomPlayerLifeTotalKey];
     [self.userDefaults synchronize];
 }
 
